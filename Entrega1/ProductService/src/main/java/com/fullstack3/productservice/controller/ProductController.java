@@ -53,11 +53,11 @@ public class ProductController {
         try {
             Product existingProduct = productService.getProductById(product.getId());
             if (existingProduct != null) {
-                productService.addProduct(product);
-                return ResponseEntity.ok(new MessageResponse("Product added"));
-            } else {
                 return ResponseEntity.status(HttpStatus.CONFLICT)
                         .body(new MessageResponse("Product already exists"));
+            } else {
+                productService.addProduct(product);
+                return ResponseEntity.ok(new MessageResponse("Product added"));
             }
         } catch (Exception e) {
             e.printStackTrace();
