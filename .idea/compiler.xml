@@ -6,24 +6,53 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="api-gateway" />
-        <module name="eureka-server" />
-        <module name="infraestructure" />
+      </profile>
+      <profile name="Annotation profile for Unknown" enabled="true">
+        <sourceOutputDir name="../generated-sources/annotations" />
+        <sourceTestOutputDir name="../generated-test-sources/test-annotations" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-configuration-processor/4.0.5/spring-boot-configuration-processor-4.0.5.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.44/lombok-1.18.44.jar" />
+        </processorPath>
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="api-gateway.main" target="1.8" />
+      <module name="api-gateway.test" target="1.8" />
+      <module name="aws.main" target="1.8" />
+      <module name="aws.test" target="1.8" />
+      <module name="bff.main" target="1.8" />
+      <module name="bff.test" target="1.8" />
       <module name="cordillera.main" target="21" />
       <module name="cordillera.test" target="21" />
-      <module name="core-intelligence.main" target="21" />
-      <module name="core-intelligence.test" target="21" />
+      <module name="core-intelligence.main" target="1.8" />
+      <module name="core-intelligence.test" target="1.8" />
       <module name="customer.main" target="21" />
       <module name="customer.test" target="21" />
-      <module name="data-sources.main" target="21" />
-      <module name="data-sources.test" target="21" />
+      <module name="data-sources.main" target="1.8" />
+      <module name="data-sources.test" target="1.8" />
+      <module name="eureka-server.main" target="1.8" />
+      <module name="eureka-server.test" target="1.8" />
       <module name="finance.main" target="21" />
       <module name="finance.test" target="21" />
+      <module name="infraestructure.main" target="1.8" />
+      <module name="infraestructure.test" target="1.8" />
       <module name="inventory.main" target="21" />
       <module name="inventory.test" target="21" />
+      <module name="ms-customer.main" target="1.8" />
+      <module name="ms-customer.test" target="1.8" />
+      <module name="ms-data-ingestion.main" target="1.8" />
+      <module name="ms-data-ingestion.test" target="1.8" />
+      <module name="ms-finance.main" target="1.8" />
+      <module name="ms-finance.test" target="1.8" />
+      <module name="ms-inventory.main" target="1.8" />
+      <module name="ms-inventory.test" target="1.8" />
+      <module name="ms-kpis.main" target="1.8" />
+      <module name="ms-kpis.test" target="1.8" />
+      <module name="ms-reporting.main" target="1.8" />
+      <module name="ms-reporting.test" target="1.8" />
+      <module name="ms-sales.main" target="1.8" />
+      <module name="ms-sales.test" target="1.8" />
       <module name="ms-saless" target="21" />
       <module name="ms_customer" target="21" />
       <module name="ms_finance" target="21" />
@@ -36,6 +65,14 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
+      <module name="api-gateway.main" options="-parameters" />
+      <module name="api-gateway.test" options="-parameters" />
+      <module name="aws" options="-parameters" />
+      <module name="aws.main" options="-parameters" />
+      <module name="aws.test" options="-parameters" />
+      <module name="bff" options="-parameters" />
+      <module name="bff.main" options="-parameters" />
+      <module name="bff.test" options="-parameters" />
       <module name="cordillera" options="-parameters" />
       <module name="cordillera.main" options="-parameters" />
       <module name="cordillera.test" options="-parameters" />
@@ -48,9 +85,13 @@
       <module name="data-sources.main" options="-parameters" />
       <module name="data-sources.test" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="eureka-server.main" options="-parameters" />
+      <module name="eureka-server.test" options="-parameters" />
       <module name="finance.main" options="-parameters" />
       <module name="finance.test" options="-parameters" />
       <module name="infraestructure" options="-parameters" />
+      <module name="infraestructure.main" options="-parameters" />
+      <module name="infraestructure.test" options="-parameters" />
       <module name="inventory.main" options="-parameters" />
       <module name="inventory.test" options="-parameters" />
       <module name="ms-customer" options="-parameters" />
